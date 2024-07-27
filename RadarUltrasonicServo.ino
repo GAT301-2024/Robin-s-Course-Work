@@ -1,6 +1,7 @@
 #include <Servo.h>. 
 const int trigPin = 8;
 const int echoPin = 9;
+const int buzzer = 4;
 long duration;
 int distance;
 
@@ -8,6 +9,7 @@ Servo myServo;
 void setup() {
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
+  pinMode(buzzer, OUTPUT);
   Serial.begin(9600);
   myServo.attach(10);
 }
@@ -28,6 +30,13 @@ void loop() {
   myServo.write(i);
   delay(30);
   distance = calculateDistance();
+  if (distance <= 100) {
+      digitalWrite(buzzer, HIGH);
+      delay(100);
+    } 
+  else {
+      digitalWrite(buzzer, LOW);
+    }
   Serial.print(i);
   Serial.print(",");
   Serial.print(distance);
