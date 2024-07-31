@@ -1,5 +1,5 @@
 # OMIYA_ROBIN-23/U/2339/GIW/PS
-
+> Read and Reviewed by AJr.Allan
 # Distance Motion Scan Using A Radar
 ## Overview
 This distance motion range scanner is a security based project that detects motion and then its display on a radar scanner using a red spot print. This is achieved when a person moves 5 meters next to the door side and this was achieved using an arduino board, ultrasonic sensor, buzzer for alerting and servo motor that is embedded on to the ultrasonics.
